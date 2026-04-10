@@ -12,9 +12,19 @@ width:100%;
 z-index:1000;
 padding:20px 8%;
 display:flex;
-justify-content:center;
+justify-content:space-between;
+align-items:center;
 }
-.header nav{display:flex;gap:50px}
+.burger{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:#fff;
+}
+.header nav{
+display:flex;
+gap:50px;
+}
 .header a{
 font-family:"Bebas";
 font-size:22px;
@@ -58,7 +68,7 @@ transition:.3s;opacity:.8
 .socials img{width:20px}
 
 /* SECTION */
-.studio{padding:100px 8%}
+.studio{padding:70px 8%}
 .studio h2{font-family:"Bebas";font-size:72px;margin-bottom:10px}
 .studio-sub{margin-top:10px;font-size:18px;opacity:.7}
 
@@ -73,7 +83,7 @@ scroll-behavior:smooth;
 }
 .slider::-webkit-scrollbar{display:none}
 
-/* ЕДИНЫЙ РАЗМЕР КАРТОЧЕК */
+/* КАРТОЧКИ */
 .card{
 flex:0 0 360px;
 width:360px;
@@ -160,37 +170,43 @@ line-height:1.8;
 }
 .footer p{margin-bottom:16px}
 
-/* COOKIE */
-.cookie{
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-background:#111;
-padding:20px 30px;
-border-radius:16px;
-display:flex;
-gap:20px;
-align-items:center;
-z-index:2000;
-}
-.cookie button{
-background:#ff7800;border:none;padding:10px 20px;
-border-radius:10px;cursor:pointer;color:#000;font-weight:600;
+/* MOBILE (только для меню и небольших экранов, но карусели остаются горизонтальными) */
+@media (max-width: 900px){
+  .card{
+    flex:0 0 280px;
+    width:280px;
+  }
+  .arrow{
+    display:none; /* на мобильных стрелки не нужны — листаем пальцем */
+  }
+  /* Бургер-меню */
+  .burger{
+    display:block;
+  }
+  .header nav{
+    position:fixed;
+    top:80px;
+    left:-100%;
+    width:100%;
+    height:calc(100vh - 80px);
+    background:#000;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+    transition:left 0.3s ease;
+    z-index:999;
+  }
+  .header nav.active{
+    left:0;
+  }
+  .header a{
+    font-size:24px;
+  }
+  /* Остальное не меняем — карусели остаются горизонтальными */
 }
 
-/* MOBILE */
-@media(max-width:900px){
-.card{flex:0 0 280px;width:280px;}
-.arrow{display:none}
-}
-
-/* ПК — убрать стрелки у ИИ-ПОДАРКИ */
-@media(min-width:901px){
-.gifts-slider-wrapper > .arrow{display:none}
-}
-
-/* ===== ОБЪЕДИНЁННЫЙ РАЗДЕЛ "ПРИМЕРЫ В ВИДЕО" ===== */
+/* Специальные стили для разделов с увеличенными карточками (ПРИМЕРЫ В ВИДЕО) */
 .video-examples-section .card {
   flex: 0 0 600px;
   width: 600px;
@@ -219,7 +235,7 @@ border-radius:10px;cursor:pointer;color:#000;font-weight:600;
   }
 }
 
-/* подзаголовки разделов (чуть меньше основного шрифта) */
+/* подзаголовки */
 .video-subheading {
   font-family: "Bebas", sans-serif;
   font-size: 36px;
@@ -228,14 +244,7 @@ border-radius:10px;cursor:pointer;color:#000;font-weight:600;
   opacity: 0.9;
 }
 
-/* ===== АУДИОПЛЕЕР ===== */
-.audio-player {
-  background: #111;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 20px 0;
-  border: 1px solid rgba(255,255,255,.1);
-}
+/* АУДИОПЛЕЕР */
 .track {
   margin-bottom: 20px;
   padding: 15px;
@@ -286,87 +295,12 @@ border-radius:10px;cursor:pointer;color:#000;font-weight:600;
   font-size: 22px;
   color: #ffa500;
 }
-/* ===== ПОРТФОЛИО: ДВЕ КОЛОНКИ ===== */
+
+/* ПОРТФОЛИО: две колонки */
 .portfolio-grid {
   display: flex;
   gap: 5%;
-  align-items: flex-start;
-  margin-top: 30px;
-}
-.audio-col {
-  flex: 0 0 40%;
-}
-.covers-col {
-  flex: 0 0 55%;
-}
-
-/* Слайдер обложек (квадратные, 1:1) */
-.covers-slider-wrapper {
-  position: relative;
-}
-.covers-slider {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-.covers-slider::-webkit-scrollbar {
-  display: none;
-}
-.cover-item {
-  flex: 0 0 auto;
-  width: 200px;
-  aspect-ratio: 1 / 1;
-  background: #1a1a1a;
-  border-radius: 16px;
-  overflow: hidden;
-}
-.cover-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Стрелки для слайдера обложек */
-.covers-slider-wrapper .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  width: 36px;
-  height: 36px;
-  font-size: 20px;
-}
-.covers-slider-wrapper .arrow.left {
-  left: -18px;
-}
-.covers-slider-wrapper .arrow.right {
-  right: -18px;
-}
-
-/* Адаптив: на мобильных колонки в столбик */
-@media (max-width: 900px) {
-  .portfolio-grid {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .audio-col, .covers-col {
-    flex: 0 0 100%;
-  }
-  .covers-slider-wrapper .arrow {
-    display: flex; /* показываем стрелки на мобильных? можно оставить как есть */
-  }
-  .cover-item {
-    width: 160px;
-  }
-}
-/* ===== ПОРТФОЛИО: ДВЕ КОЛОНКИ ===== */
-.portfolio-grid {
-  display: flex;
-  gap: 5%;
-  align-items: stretch; /* чтобы колонки были одинаковой высоты */
+  align-items: stretch;
   margin-top: 30px;
 }
 .audio-col {
@@ -379,7 +313,6 @@ border-radius:10px;cursor:pointer;color:#000;font-weight:600;
   overflow-y: auto;
   padding-right: 10px;
 }
-/* красивая полоса прокрутки (опционально) */
 .tracks-list::-webkit-scrollbar {
   width: 4px;
 }
@@ -390,12 +323,9 @@ border-radius:10px;cursor:pointer;color:#000;font-weight:600;
   background: #ffa500;
   border-radius: 4px;
 }
-
 .covers-col {
   flex: 0 0 55%;
 }
-
-/* Слайдер обложек — одна обложка на экран */
 .covers-slider-wrapper {
   position: relative;
   width: 100%;
@@ -424,8 +354,6 @@ border-radius:10px;cursor:pointer;color:#000;font-weight:600;
   object-fit: cover;
   display: block;
 }
-
-/* Стрелки поверх картинки */
 .covers-slider-wrapper .arrow {
   position: absolute;
   top: 50%;
@@ -447,8 +375,6 @@ border-radius:10px;cursor:pointer;color:#000;font-weight:600;
 .covers-slider-wrapper .arrow:hover {
   background: rgba(0,0,0,0.9);
 }
-
-/* Адаптив: на мобильных колонки в столбик */
 @media (max-width: 900px) {
   .portfolio-grid {
     flex-direction: column;
@@ -462,7 +388,8 @@ border-radius:10px;cursor:pointer;color:#000;font-weight:600;
     overflow-y: visible;
   }
 }
-/* Дополнительное описание в HERO */
+
+/* Описание в HERO */
 .hero-description {
   margin-top: 30px;
   max-width: 500px;
@@ -482,30 +409,27 @@ border-radius:10px;cursor:pointer;color:#000;font-weight:600;
     font-size: 14px;
   }
 }
-/* Кнопка ЗАКАЗАТЬ — широкая, но в строке с иконками */
+
+/* Кнопка ЗАКАЗАТЬ */
 .order-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 40px;               /* такая же высота, как у иконок */
-  padding: 0 50px;            /* делаем шире за счёт горизонтальных отступов */
-  background: #1a1a1a;        /* фон как у иконок */
-  color: #ffa500;             /* оранжевый текст */
+  height: 40px;
+  padding: 0 50px;
+  background: #1a1a1a;
+  color: #ffa500;
   font-family: "Bebas", sans-serif;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 10px;        /* скругление как у иконок */
+  border-radius: 10px;
   transition: 0.3s;
   letter-spacing: 1px;
 }
 .order-btn:hover {
-  background: #2a2a2a;        /* светлее при наведении, как у иконок */
-  transform: translateY(-3px); /* тот же эффект подъёма */
-}
-/* Уменьшаем отступы между разделами */
-.studio {
-  padding: 70px 8%;
+  background: #2a2a2a;
+  transform: translateY(-3px);
 }
 
 /* Анимация появления */
@@ -517,144 +441,4 @@ border-radius:10px;cursor:pointer;color:#000;font-weight:600;
 .fade-up.appear {
   opacity: 1;
   transform: translateY(0);
-}
-/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ (до 768px) ===== */
-@media (max-width: 768px) {
-  /* Header — меню вертикально или прокрутка */
-  .header {
-    padding: 15px 5%;
-  }
-  .header nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-  .header a {
-    font-size: 16px;
-  }
-
-  /* Hero — текст и отступы */
-  .hero-content {
-    left: 5%;
-    top: 55%;
-    width: 90%;
-  }
-  .hero h1 {
-    font-size: 48px;
-    line-height: 1.1;
-  }
-  .hero-sub {
-    font-size: 14px;
-  }
-  .hero-description p {
-    font-size: 12px;
-  }
-  .hero-description {
-    max-width: 100%;
-  }
-  .hero-buttons {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .order-btn {
-    padding: 0 20px;
-    font-size: 16px;
-    height: 36px;
-  }
-  .socials a {
-    width: 36px;
-    height: 36px;
-  }
-  .socials img {
-    width: 18px;
-  }
-
-  /* Все секции */
-  .studio {
-    padding: 50px 5%;
-  }
-  .studio h2 {
-    font-size: 36px;
-  }
-  .studio-sub {
-    font-size: 14px;
-  }
-
-  /* Карточки — на всю ширину */
-  .cards.slider {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .card {
-    flex: 0 0 auto;
-    width: 100%;
-    padding: 20px;
-  }
-  .video-examples-section .card {
-    width: 100%;
-    flex: 0 0 auto;
-  }
-  .video-examples-section .media {
-    aspect-ratio: 16 / 9;
-  }
-
-  /* Слайдеры — отключаем горизонтальный скролл, делаем вертикальный список */
-  .slider-wrapper {
-    overflow-x: visible;
-  }
-  .slider {
-    overflow-x: visible;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .arrow {
-    display: none;
-  }
-
-  /* Портфолио: колонки в столбик */
-  .portfolio-grid {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .audio-col, .covers-col {
-    flex: 0 0 100%;
-  }
-  .tracks-list {
-    max-height: none;
-    overflow-y: visible;
-  }
-
-  /* Слайдер обложек (квадратный) */
-  .covers-slider-wrapper .arrow {
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
-  }
-  .covers-slider-wrapper .arrow.left {
-    left: 5px;
-  }
-  .covers-slider-wrapper .arrow.right {
-    right: 5px;
-  }
-
-  /* Отзывы — карточки на всю ширину */
-  .reviews-slider {
-    flex-direction: column;
-  }
-  .review-card {
-    width: 100%;
-    flex: 0 0 auto;
-  }
-
-  /* Видео в карточках */
-  .media video {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Футер */
-  .footer {
-    padding: 40px 5%;
-    font-size: 12px;
-  }
 }
