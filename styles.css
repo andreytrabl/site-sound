@@ -47,7 +47,7 @@ z-index:-1;
 .hero{height:100vh;position:relative;overflow:hidden}
 .hero-bg{position:absolute;width:100%;height:100%;object-fit:cover}
 .hero-overlay{position:absolute;width:100%;height:100%;background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,0))}
-.hero-content{position:absolute;top:50%;transform:translateY(-50%);left:8%;z-index:2}
+.hero-content{position:absolute;top:50%;transform:translateY(-50%);left:8%;right:5%;z-index:2}
 .hero h1{font-family:"Bebas";font-size:120px;line-height:.9}
 .hero-sub{margin-top:20px;font-size:18px;opacity:.9}
 .hero-bottom-gradient{
@@ -170,14 +170,16 @@ line-height:1.8;
 }
 .footer p{margin-bottom:16px}
 
-/* MOBILE (только для меню и небольших экранов, но карусели остаются горизонтальными) */
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ (исправленная) ===== */
 @media (max-width: 900px){
+  /* Карточки в слайдерах остаются горизонтальными */
   .card{
     flex:0 0 280px;
     width:280px;
   }
+  /* Стрелки на мобильных можно скрыть (листаем пальцем) */
   .arrow{
-    display:none; /* на мобильных стрелки не нужны — листаем пальцем */
+    display:none;
   }
   /* Бургер-меню */
   .burger{
@@ -203,7 +205,65 @@ line-height:1.8;
   .header a{
     font-size:24px;
   }
-  /* Остальное не меняем — карусели остаются горизонтальными */
+  
+  /* HERO: лицо видно, текст не вылезает */
+  .hero {
+    min-height: 100vh;
+    height: auto;
+  }
+  .hero-content {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    right: 5%;
+    width: auto;
+  }
+  .hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+  .hero-sub {
+    font-size: 14px;
+  }
+  .hero-bg {
+    object-position: 30% 50%; /* смещаем, чтобы лицо было в кадре */
+  }
+  .hero-description p {
+    font-size: 12px;
+  }
+  
+  /* Секции */
+  .studio {
+    padding: 50px 5%;
+  }
+  .studio h2 {
+    font-size: 36px;
+  }
+  .studio-sub {
+    font-size: 14px;
+  }
+  
+  /* Портфолио: колонки в столбик */
+  .portfolio-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .audio-col, .covers-col {
+    flex: 0 0 100%;
+  }
+  .tracks-list {
+    max-height: none;
+    overflow-y: visible;
+  }
+  
+  /* Слайдер обложек: стрелки показываем */
+  .covers-slider-wrapper .arrow {
+    display: flex !important;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    background: rgba(0,0,0,0.6);
+  }
 }
 
 /* Специальные стили для разделов с увеличенными карточками (ПРИМЕРЫ В ВИДЕО) */
@@ -230,8 +290,9 @@ line-height:1.8;
     flex: 0 0 280px;
     width: 280px;
   }
+  /* ИСПРАВЛЕНО: видео остаются горизонтальными 16:9, не превращаются в 3:4 */
   .video-examples-section .media {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -242,6 +303,11 @@ line-height:1.8;
   margin: 40px 0 10px 0;
   color: #fff;
   opacity: 0.9;
+}
+@media (max-width: 900px) {
+  .video-subheading {
+    font-size: 28px;
+  }
 }
 
 /* АУДИОПЛЕЕР */
@@ -296,7 +362,7 @@ line-height:1.8;
   color: #ffa500;
 }
 
-/* ПОРТФОЛИО: две колонки */
+/* ПОРТФОЛИО: две колонки (десктоп) */
 .portfolio-grid {
   display: flex;
   gap: 5%;
@@ -365,6 +431,10 @@ line-height:1.8;
   z-index: 10;
   border-radius: 50%;
   backdrop-filter: blur(4px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .covers-slider-wrapper .arrow.left {
   left: 10px;
@@ -374,19 +444,6 @@ line-height:1.8;
 }
 .covers-slider-wrapper .arrow:hover {
   background: rgba(0,0,0,0.9);
-}
-@media (max-width: 900px) {
-  .portfolio-grid {
-    flex-direction: column;
-    gap: 40px;
-  }
-  .audio-col, .covers-col {
-    flex: 0 0 100%;
-  }
-  .tracks-list {
-    max-height: none;
-    overflow-y: visible;
-  }
 }
 
 /* Описание в HERO */
@@ -403,10 +460,10 @@ line-height:1.8;
 }
 @media (max-width: 900px) {
   .hero-description {
-    max-width: 90%;
+    max-width: 100%;
   }
   .hero-description p {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
