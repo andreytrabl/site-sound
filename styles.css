@@ -170,18 +170,15 @@ line-height:1.8;
 }
 .footer p{margin-bottom:16px}
 
-/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ (исправленная) ===== */
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
 @media (max-width: 900px){
-  /* Карточки в слайдерах остаются горизонтальными */
   .card{
     flex:0 0 280px;
     width:280px;
   }
-  /* Стрелки на мобильных можно скрыть (листаем пальцем) */
   .arrow{
     display:none;
   }
-  /* Бургер-меню */
   .burger{
     display:block;
   }
@@ -206,33 +203,38 @@ line-height:1.8;
     font-size:24px;
   }
   
-  /* HERO: лицо видно, текст не вылезает */
+  /* HERO — текст внизу, лицо по центру */
   .hero {
     min-height: 100vh;
     height: auto;
   }
   .hero-content {
-    top: 50%;
-    transform: translateY(-50%);
+    position: absolute;
+    top: auto;
+    bottom: 15%;
     left: 5%;
     right: 5%;
+    transform: none;
     width: auto;
   }
   .hero h1 {
-    font-size: 48px;
+    font-size: 42px;
     line-height: 1.1;
   }
   .hero-sub {
-    font-size: 14px;
+    font-size: 13px;
   }
   .hero-bg {
-    object-position: 30% 50%; /* смещаем, чтобы лицо было в кадре */
+    object-position: 50% 35%; /* лицо в центре кадра */
+    object-fit: cover;
   }
   .hero-description p {
-    font-size: 12px;
+    font-size: 11px;
+  }
+  .hero-buttons {
+    margin-top: 20px;
   }
   
-  /* Секции */
   .studio {
     padding: 50px 5%;
   }
@@ -243,7 +245,6 @@ line-height:1.8;
     font-size: 14px;
   }
   
-  /* Портфолио: колонки в столбик */
   .portfolio-grid {
     flex-direction: column;
     gap: 40px;
@@ -256,7 +257,6 @@ line-height:1.8;
     overflow-y: visible;
   }
   
-  /* Слайдер обложек: стрелки показываем */
   .covers-slider-wrapper .arrow {
     display: flex !important;
     width: 36px;
@@ -290,7 +290,6 @@ line-height:1.8;
     flex: 0 0 280px;
     width: 280px;
   }
-  /* ИСПРАВЛЕНО: видео остаются горизонтальными 16:9, не превращаются в 3:4 */
   .video-examples-section .media {
     aspect-ratio: 16 / 9;
   }
