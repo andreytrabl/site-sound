@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Андрей Николаев</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-gradient"></div>
+    <nav>
+        <a href="#aboutme">ОБО МНЕ</a>
+        <a href="#services">УСЛУГИ</a>
+        <a href="#portfolio">ПОРТФОЛИО</a>
+        <a href="#video">ВИДЕО</a>
+        <a href="#reviews">ОТЗЫВЫ</a>
+        <a href="#contacts">КОНТАКТЫ</a>
+    </nav>
+</header>
+
+<section id="aboutme" class="hero">
+<img src="img/hero.png" class="hero-bg" alt="Андрей Николаев">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>АНДРЕЙ<br>НИКОЛАЕВ</h1>
+<p class="hero-sub">
+звукорежиссёр студии «Артель», выпускник школ «Musicheads» и «Артель»
+</p>
+<div class="hero-buttons">
+  <div class="socials">
+    <a href="https://vk.com/id493635916?utm_source=site" class="order-btn" target="_blank">ЗАКАЗАТЬ</a>
+    <a href="https://vk.com/id493635916?utm_source=site" target="_blank"><img src="assets/icons/vk.png"></a>
+    <a href="https://t.me/andreytrabl?utm_source=site" target="_blank"><img src="assets/icons/telegram.png"></a>
+    <a href="https://www.instagram.com/andreytrabl?utm_source=site" target="_blank"><img src="assets/icons/instagram.png"></a>
+    <a href="https://youtube.com/@andreytrabl?utm_source=site" target="_blank"><img src="assets/icons/youtube.png"></a>
+  </div>
+</div>
+<div class="hero-description">
+  <p>с 2010 года я создаю песни, свои и чужие, сопровождаю исполнителей от написания текста и работы на студии до выпуска релиза на стриминговых сервисах</p>
+  <p>учился у Артура Орлова в школе «Profile» и у Константина Матофонова в школе звукорежиссуры «Musicheads»</p>
+</div>
+</div>
+<div class="hero-bottom-gradient"></div>
+</section>
+
+<!-- УСЛУГИ -->
+<section id="services" class="studio">
+<h2>УСЛУГИ</h2>
+<p class="studio-sub">
+очная запись в г. Тула или удалённые услуги из любой точки мира
+</p>
+<div class="socials section-socials">
+<a href="https://vk.com/studio_artel_tula?utm_source=site" target="_blank"><img src="assets/icons/vk.png"></a>
+<a href="https://t.me/studio_artel_tula?utm_source=site" target="_blank"><img src="assets/icons/telegram.png"></a>
+<a href="https://www.instagram.com/andreytrabl?utm_source=site" target="_blank"><img src="assets/icons/instagram.png"></a>
+<a href="https://youtube.com/playlist?list=PLKx2g6oksyXJrZCPy59qqqY3CEEhPiZW6&si=IwpebHLSXvynTJCy?utm_source=site" target="_blank"><img src="assets/icons/youtube.png"></a>
+</div>
+
+<div class="slider-wrapper">
+<button class="arrow left" onclick="scrollSlider(this, -1)">❮</button>
+<div class="cards slider">
+
+<div class="card">
+  <h3>ЗАПИСЬ НА СТУДИИ</h3>
+  <p>записываем любой вокал и музыкальные инструменты: духовые, медные, акустические гитары, электрогитар и пр.</p>
+  <div class="price">от 1000 руб.</div>
+</div>
+
+<div class="card">
+  <h3>СВЕДЕНИЕ И МАСТЕРИНГ</h3>
+  <p>сведение и цифровой мастеринг под референсы с ручной редакцией, по дорожкам или с готовым минусом, с вокалом или без</p>
+  <div class="price">от 6000 руб.</div>
+</div>
+
+<div class="card">
+  <h3>АРАНЖИРОВКА</h3>
+  <p>в любом жанре с живыми и/или электронными инструментами под ваши референсы и хотелки</p>
+  <div class="price">от 10 000 руб.</div>
+</div>
+
+<div class="card">
+  <h3>ПЕСНЯ НА ЗАКАЗ</h3>
+  <p>пишем текст и музыку с нуля под ваши хотелки: для себя и для площадок, на баттлы и конкурсы, на праздники и корпоративы — как хотите</p>
+  <div class="price">от 10 000 руб.</div>
+</div>
+
+<div class="card">
+  <h3>ЧИСТКА И ОБРАБОТКА ГОЛОСА</h3>
+  <p>для подкастов, аудиокниг и озвучки видео или подготовка вокала к сведению вашими силами</p>
+  <div class="price">от 100 руб.</div>
+</div>
+
+</div>
+<button class="arrow right" onclick="scrollSlider(this, 1)">❯</button>
+</div>
+</section>
+
+<!-- ПОРТФОЛИО (аудио + обложки) -->
+<section id="portfolio" class="studio portfolio-section">
+  <h2>ПОРТФОЛИО</h2>
+  <p class="studio-sub">послушать примеры сведения, мастеринга и аранжировок</p>
+
+  <div class="portfolio-grid">
+    <!-- Левая колонка: список треков (прокручиваемый) -->
+    <div class="audio-col">
+      <div class="tracks-list">
+        
+        <div class="track">
+          <div class="track-title">
+            <span>ТИМАТИ, ГРИГОРИЙ ЛЕПС — С ЧИСТОГО ЛИСТА</span>
+            <span class="track-duration">03:24</span>
+          </div>
+          <audio controls class="custom-audio" preload="none">
+            <source src="assets/audio/timati_leps.mp3" type="audio/mpeg">
+          </audio>
+          <div class="track-description">
+            сведение и мастеринг в рамках аттестации в школе «Musicheads»
+          </div>
+        </div>
+
+        <div class="track">
+          <div class="track-title">
+            <span>ЖАК ЭНТОНИ — ЛЮЛИ</span>
+            <span class="track-duration">03:24</span>
+          </div>
+          <audio controls class="custom-audio" preload="none">
+            <source src="assets/audio/luli.mp3" type="audio/mpeg">
+          </audio>
+          <div class="track-description">
+            сведение и мастеринг в рамках аттестации в школе «Musicheads»
+          </div>
+        </div>
+
+        <div class="track">
+          <div class="track-title">
+            <span>Песня под ключ друзьям на свадьбу</span>
+            <span class="track-duration">03:24</span>
+          </div>
+          <audio controls class="custom-audio" preload="none">
+            <source src="assets/audio/dasha_yura_svadba.mp3" type="audio/mpeg">
+          </audio>
+          <div class="track-description">
+            текст, аранжировка, запись, сведение, мастеринг
+          </div>
+        </div>
+
+        <div class="track">
+          <div class="track-title">
+            <span>РЕСТОРАТОР — БЕЗЗВУЧНЫЙ РЕЖИМ</span>
+            <span class="track-duration">03:24</span>
+          </div>
+          <audio controls class="custom-audio" preload="none">
+            <source src="assets/audio/restorator_bezzvuchnyrezhim.mp3" type="audio/mpeg">
+          </audio>
+          <div class="track-description">
+            бит, аранжировка
+          </div>
+        </div>
+
+        <div class="track">
+          <div class="track-title">
+            <span>ЗАНОЗА — ХУЛИГАНКА</span>
+            <span class="track-duration">03:24</span>
+          </div>
+          <audio controls class="custom-audio" preload="none">
+            <source src="assets/audio/zanoza_huliganka.mp3" type="audio/mpeg">
+          </audio>
+          <div class="track-description">
+            сведение и мастеринг детского сингла
+          </div>
+        </div>
+
+        <div class="track">
+          <div class="track-title">
+            <span>КАРИНА ПЫЛЬНИКОВА — ВОИН</span>
+            <span class="track-duration">03:24</span>
+          </div>
+          <audio controls class="custom-audio" preload="none">
+            <source src="assets/audio/karina_voin.mp3" type="audio/mpeg">
+          </audio>
+          <div class="track-description">
+            сведение и мастеринг детского кавера
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Правая колонка: слайдер обложек (одна обложка) -->
+    <div class="covers-col">
+      <div class="covers-slider-wrapper">
+        <button class="arrow left covers-left">❮</button>
+        <div class="covers-slider">
+          <div class="covers-track">
+            <div class="cover-item">
+              <img src="assets/img/covers/restorator_posledny.jpg" alt="Обложка">
+            </div>
+            <div class="cover-item">
+              <img src="assets/img/covers/andreytrabl_dtl.jpg" alt="Обложка">
+            </div>
+            <div class="cover-item">
+              <img src="assets/img/covers/sugrob_grust200.jpg" alt="Обложка">
+            </div>
+            <div class="cover-item">
+              <img src="assets/img/covers/ksusharox_tvoysmeh.jpg" alt="Обложка">
+            </div>
+            <div class="cover-item">
+              <img src="assets/img/covers/nemelodyon.jpg" alt="Обложка">
+            </div>
+          </div>
+        </div>
+        <button class="arrow right covers-right">❯</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ПРИМЕРЫ В ВИДЕО (объединённый раздел) -->
+<section id="video" class="studio video-examples-section">
+  <h2>ПРИМЕРЫ В ВИДЕО</h2>
+
+  <!-- Подраздел 1: ДО / ПОСЛЕ -->
+  <h3 class="video-subheading">ДО / ПОСЛЕ</h3>
+  <p class="studio-sub">наглядные примеры редакции вокала, сведения, чистки голоса, аранжировок</p>
+  <div class="slider-wrapper">
+    <button class="arrow left" onclick="scrollSlider(this, -1)">❮</button>
+    <div class="cards slider">
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/beforeafter/tunepop.mp4" controls poster="assets/img/posters/tunepop.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>ПОП-ТРЕК</h3>
+        <p>пример тюнинга вокала</p>
+      </div>
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/beforeafter/svabda.mp4" controls poster="assets/img/posters/svabda.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>ПЕСНЯ НА СВАДЬБУ</h3>
+        <p>пример сведения песни на свадьбу</p>
+      </div>
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/beforeafter/clean1.mp4" controls poster="assets/img/posters/clean1.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>ЧИСТКА ГОЛОСА ДЛЯ ВИДЕО</h3>
+        <p>пример чистки голоса для видео от шумов и эхо</p>
+      </div>
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/beforeafter/rap2.mp4" controls poster="assets/img/posters/rap2.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>РЭП-ТРЕК</h3>
+        <p>пример тюнинга вокала и сведения рэпа</p>
+      </div>
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/beforeafter/war.mp4" controls poster="assets/img/posters/war.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>ПЕСНЯ НА 9 МАЯ</h3>
+        <p>пример сведения военной песни на корпоратив</p>
+      </div>
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/beforeafter/podcast1.mp4" controls poster="assets/img/posters/podcast1.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>ЧИСТКА ГОЛОСА ДЛЯ ПОДКАСТА</h3>
+        <p>пример чистки голоса от шумов и эхо</p>
+      </div>
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/beforeafter/deephouse.mp4" controls poster="assets/img/posters/deephouse.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>DEEP HOUSE</h3>
+        <p>пример аранжировки и сведения в стиле deep house</p>
+      </div>
+    </div>
+    <button class="arrow right" onclick="scrollSlider(this, 1)">❯</button>
+  </div>
+
+  <!-- Подраздел 2: МУЗЫКАЛЬНЫЕ КЛИПЫ -->
+  <h3 class="video-subheading" style="margin-top: 60px;">МУЗЫКАЛЬНЫЕ КЛИПЫ</h3>
+  <p class="studio-sub">экранизированное сведение</p>
+  <div class="slider-wrapper">
+    <button class="arrow left" onclick="scrollSlider(this, -1)">❮</button>
+    <div class="cards slider">
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/videoclips/andreytrabl_dnm.mp4" controls poster="assets/img/posters/andreytrabl_dnm.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>АНДРЕЙ ТРАБЛ — Дело нескольких минут</h3>
+        <p>клип на трек 3 раунда 17 независимого баттла</p>
+      </div>
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/videoclips/r1fmabes_kubokmc.mp4" controls poster="assets/img/posters/r1fmabes_kubokmc.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>R1FMABES — КУБОК МЦ SURVIVAL (MAIN EVENT)</h3>
+        <p>сводил Владу раунд против SECTOR</p>
+      </div>
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/videoclips/tgpu_8_marta.mp4" controls poster="assets/img/posters/tgpu_8_marta.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>Университет Льва Толстого</h3>
+        <p>делали поздравление с 8 марта ребятам из родного педа</p>
+      </div>
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/videoclips/sashaspoke_codeend.mp4" controls poster="assets/img/posters/sashaspoke_codeend.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>sashaspoke — CODE: END</h3>
+        <p>сведение для экранизации сингла Саши</p>
+      </div>
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/videoclips/hehawatyca_shooter.mp4" controls poster="assets/img/posters/hehawatyca_shooter.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>HEHAWATYCA — SHOOTER</h3>
+        <p>cведение для экранизации сингла пацанов</p>
+      </div>
+      <div class="card media-card">
+        <div class="media">
+          <video src="assets/video/cards/videoclips/INSTAGIRLS.mp4" controls poster="assets/img/posters/INSTAGIRLS.jpg" style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <h3>INSTAGIRLS</h3>
+        <p>запись и обработка дикторского голоса для онлайн-конкурса</p>
+      </div>
+    </div>
+    <button class="arrow right" onclick="scrollSlider(this, 1)">❯</button>
+  </div>
+</section>
+
+<!-- ОТЗЫВЫ (без изменений, сокращено для краткости) -->
+<section class="studio" id="reviews">
+<h2>ОТЗЫВЫ</h2>
+<div class="slider-wrapper reviews-wrapper">
+<button class="arrow left reviews-left">&#10094;</button>
+<div class="slider reviews-slider">
+      <div class="card review-card"><h3>Ольга</h3><span class="review-desc">делали песню на заказ на свадьбу лучшей подруге</span><p class="review-text">Заказывали песню под ключ на свадьбу подруги. Все остались довольны — и молодожены, и мы. Все пожелания были учтены, текст написали сами, исполнение превзошло ожидания. Эта трогательная песня сделала праздник еще более особенным. Большое спасибо за профессиональный подход!</p></div>
+      <div class="card review-card"><h3>Саша</h3><span class="review-desc">несколько лет пишем Саше песни под ключ</span><p class="review-text">Не первый год работаем на студии — меня всё устраивает и мне нравится 🤟</p></div>
+      <div class="card review-card"><h3>Василий</h3><span class="review-desc">сводил альбом «Грусть 200» для исполнителя СУ.ГРОБ</span><p class="review-text">Андрей отлично свёл мне огромный альбом, работали на одном дыхании, результат отличный.</p></div>
+      <div class="card review-card"><h3>Юра</h3><span class="review-desc">сводил трек на баттл</span><p class="review-text">Учёл все пожелания по звуку, сделал работу на высоком уровне, уложился в сроки и был всегда на связи. Рекомендую.</p></div>
+      <div class="card review-card"><h3>Катя</h3><span class="review-desc">делали мультик на свадьбу</span><p class="review-text">Такая вот мульти-история о нас! Душевно получилось ❤️ Прекрасная идея для подарка.</p></div>
+      <div class="card review-card"><h3>Валерия</h3><span class="review-desc">писали свадебный трек дистанционно</span><p class="review-text">Лучшее решение! Текст был не банальным, подстроенным под нас. Работали ответственно и с юмором. Всё дистанционно — и это огромный плюс. Молодожены в восторге!</p></div>
+      <div class="card review-card"><h3>Юлия</h3><span class="review-desc">делали шарж на день рождения</span><p class="review-text">Предложили несколько вариантов, проработали правки до мелочей. Очень индивидуальный и необычный подарок!</p></div>
+      <div class="card review-card"><h3>Артём</h3><span class="review-desc">сводили авторскую песню</span><p class="review-text">Работает до талого, учитывает даже самые безумные хотелки. Качеством доволен на 100%.</p></div>
+      <div class="card review-card"><h3>Даша</h3><span class="review-desc">стилизация фото под Миядзаки</span><p class="review-text">Хотела как будто Хаяо Миядзаки нарисовал — получилось очень красиво. Рекомендую 👌</p></div>
+</div>
+<button class="arrow right reviews-right">&#10095;</button>
+</div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="contacts" class="studio">
+  <h2>КОНТАКТЫ</h2>
+  <p class="studio-sub">свяжитесь со мной любым удобным способом</p>
+  
+  <div class="hero-buttons">
+    <div class="socials">
+      <a href="https://vk.com/id493635916?utm_source=site" class="order-btn" target="_blank">ЗАКАЗАТЬ</a>
+      <a href="https://vk.com/id493635916?utm_source=site" target="_blank"><img src="assets/icons/vk.png" alt="VK"></a>
+      <a href="https://t.me/andreytrabl?utm_source=site" target="_blank"><img src="assets/icons/telegram.png" alt="Telegram"></a>
+      <a href="https://www.instagram.com/andreytrabl?utm_source=site" target="_blank"><img src="assets/icons/instagram.png" alt="Instagram"></a>
+      <a href="https://youtube.com/@andreytrabl?utm_source=site" target="_blank"><img src="assets/icons/youtube.png" alt="YouTube"></a>
+    </div>
+  </div>
+  
+  <p style="margin-top: 30px; font-size: 15px; opacity: 0.7;">или напишите на почту: <a href="mailto:andreytrabl@mail.ru" style="color: #ffa500;">andreytrabl@mail.ru</a></p>
+</section>
+
+<footer class="footer">
+<p>*Instagram и Facebook признаны экстремистскими организациями и запрещены на территории РФ.</p>
+<p>Все наши материалы — авторский контент, защищённый авторским правом. Если вы хотите использовать наши материалы, пожалуйста, свяжитесь с нами: andreytrabl@mail.ru</p>
+<p>© Андрей Николаев, 2026</p>
+</footer>
+
+<script>
+/* ===== БЕСКОНЕЧНЫЕ СЛАЙДЕРЫ С КЛОНИРОВАНИЕМ ===== */
+function makeInfiniteSlider(wrapper) {
+  const slider = wrapper.querySelector('.slider');
+  if (!slider) return;
+
+  // Сохраняем оригинальные карточки
+  const originalCards = Array.from(slider.children);
+  if (originalCards.length === 0) return;
+
+  // Создаём клоны для начала и конца
+  const cloneLeft = [];
+  const cloneRight = [];
+  for (let i = 0; i < originalCards.length; i++) {
+    cloneRight.push(originalCards[i].cloneNode(true));
+    cloneLeft.push(originalCards[i].cloneNode(true));
+  }
+  // Добавляем клоны в DOM
+  cloneLeft.reverse().forEach(clone => slider.prepend(clone));
+  cloneRight.forEach(clone => slider.append(clone));
+
+  // Определяем ширину одной карточки + gap
+  function getCardWidth() {
+    const card = slider.querySelector('.card');
+    if (!card) return 360;
+    const style = getComputedStyle(slider);
+    const gap = parseInt(style.gap) || 24;
+    return card.offsetWidth + gap;
+  }
+
+  let cardWidth = getCardWidth();
+  let originalWidth = cardWidth * originalCards.length;
+  let cloneWidth = cardWidth * originalCards.length;
+  let totalWidth = originalWidth + cloneWidth * 2;
+
+  // Устанавливаем начальную позицию на первую оригинальную карточку
+  let startOffset = cloneWidth;
+  slider.scrollLeft = startOffset;
+
+  // Функция коррекции при скролле
+  let isAdjusting = false;
+  function adjustScroll() {
+    if (isAdjusting) return;
+    const scrollLeft = slider.scrollLeft;
+    if (scrollLeft < cloneWidth) {
+      // Долистали до левых клонов -> прыгаем в правые оригиналы
+      isAdjusting = true;
+      slider.style.scrollBehavior = 'auto';
+      slider.scrollLeft = scrollLeft + originalWidth;
+      setTimeout(() => {
+        slider.style.scrollBehavior = 'smooth';
+        isAdjusting = false;
+      }, 20);
+    } else if (scrollLeft > cloneWidth + originalWidth) {
+      // Долистали до правых клонов -> прыгаем в левые оригиналы
+      isAdjusting = true;
+      slider.style.scrollBehavior = 'auto';
+      slider.scrollLeft = scrollLeft - originalWidth;
+      setTimeout(() => {
+        slider.style.scrollBehavior = 'smooth';
+        isAdjusting = false;
+      }, 20);
+    }
+  }
+
+  // Слушаем событие scroll (для листания пальцем/мышкой)
+  slider.addEventListener('scroll', adjustScroll);
+
+  // Стрелки
+  const leftArrow = wrapper.querySelector('.arrow.left');
+  const rightArrow = wrapper.querySelector('.arrow.right');
+  if (leftArrow && rightArrow) {
+    function scrollStep(direction) {
+      const step = cardWidth;
+      let newScrollLeft = slider.scrollLeft + direction * step;
+      // Временно отключаем коррекцию, чтобы не сработала дважды
+      slider.style.scrollBehavior = 'smooth';
+      slider.scrollLeft = newScrollLeft;
+      // Коррекция сработает автоматически через событие scroll
+    }
+    leftArrow.onclick = (e) => {
+      e.preventDefault();
+      scrollStep(-1);
+    };
+    rightArrow.onclick = (e) => {
+      e.preventDefault();
+      scrollStep(1);
+    };
+  }
+
+  // Обновляем ширину при ресайзе (если карточки меняют размер)
+  window.addEventListener('resize', () => {
+    cardWidth = getCardWidth();
+    originalWidth = cardWidth * originalCards.length;
+    cloneWidth = cardWidth * originalCards.length;
+    totalWidth = originalWidth + cloneWidth * 2;
+    // Переносим позицию, чтобы не сбиться
+    slider.scrollLeft = cloneWidth;
+  });
+}
+
+// Запускаем для всех слайдеров (кроме слайдера обложек)
+document.querySelectorAll('.slider-wrapper:not(.covers-slider-wrapper)').forEach(wrapper => {
+  makeInfiniteSlider(wrapper);
+});
+
+/* ===== DRAG SCROLL ДЛЯ ВСЕХ СЛАЙДЕРОВ (мышкой/пальцем) ===== */
+document.querySelectorAll('.slider').forEach(slider => {
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  slider.addEventListener('mousedown', (e) => {
+    if (window.innerWidth <= 900) return;
+    isDown = true;
+    slider.style.cursor = 'grabbing';
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.style.cursor = 'grab';
+  });
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.style.cursor = 'grab';
+  });
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    slider.scrollLeft = scrollLeft - walk;
+    scrollLeft = slider.scrollLeft; // обновляем
+    startX = x;
+  });
+  slider.style.cursor = 'grab';
+});
+
+/* ===== ОБЛОЖКИ: бесконечный слайдер (уже есть, оставляем) ===== */
+const coversTrack = document.querySelector('.covers-track');
+const coversLeftBtn = document.querySelector('.covers-left');
+const coversRightBtn = document.querySelector('.covers-right');
+let coverIndex = 0;
+let totalCovers = 0;
+let isTransitioning = false;
+
+function updateCoverSlider(instant = false) {
+  if (!coversTrack) return;
+  const shift = -coverIndex * 100;
+  coversTrack.style.transition = instant ? 'none' : 'transform 0.3s ease-in-out';
+  coversTrack.style.transform = `translateX(${shift}%)`;
+  if (instant) setTimeout(() => coversTrack.style.transition = '', 20);
+}
+
+function goToNext() {
+  if (isTransitioning) return;
+  isTransitioning = true;
+  if (coverIndex === totalCovers - 1) {
+    coverIndex = 0;
+    updateCoverSlider(true);
+    setTimeout(() => isTransitioning = false, 300);
+  } else {
+    coverIndex++;
+    updateCoverSlider(false);
+    setTimeout(() => isTransitioning = false, 300);
+  }
+}
+
+function goToPrev() {
+  if (isTransitioning) return;
+  isTransitioning = true;
+  if (coverIndex === 0) {
+    coverIndex = totalCovers - 1;
+    updateCoverSlider(true);
+    setTimeout(() => isTransitioning = false, 300);
+  } else {
+    coverIndex--;
+    updateCoverSlider(false);
+    setTimeout(() => isTransitioning = false, 300);
+  }
+}
+
+if (coversTrack && coversLeftBtn && coversRightBtn) {
+  totalCovers = coversTrack.children.length;
+  updateCoverSlider(true);
+  coversLeftBtn.addEventListener('click', goToPrev);
+  coversRightBtn.addEventListener('click', goToNext);
+}
+
+/* ===== SMOOTH SCROLL NAV ===== */
+document.querySelectorAll('header nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+/* ===== АНИМАЦИЯ ПОЯВЛЕНИЯ ===== */
+const animatedBlocks = document.querySelectorAll('.studio, .hero, footer');
+const appearObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('appear');
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+animatedBlocks.forEach(block => {
+  block.classList.add('fade-up');
+  appearObserver.observe(block);
+});
+</script>
+
+</body>
+</html>

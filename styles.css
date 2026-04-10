@@ -1,0 +1,520 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#fff;font-family:"TikTok",sans-serif;scroll-behavior:smooth}
+
+@font-face{font-family:"Bebas";src:url("fonts/BebasNeueCyrillic-Bold.ttf")}
+@font-face{font-family:"TikTok";src:url("fonts/TikTokSans-Regular.ttf")}
+
+/* HEADER */
+.header{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+padding:20px 8%;
+display:flex;
+justify-content:center;
+}
+.header nav{display:flex;gap:50px}
+.header a{
+font-family:"Bebas";
+font-size:22px;
+color:#fff;
+text-decoration:none;
+opacity:.8;
+transition:.3s;
+}
+.header a:hover{opacity:1}
+
+.header-gradient{
+position:absolute;
+top:0;left:0;
+width:100%;height:120px;
+background:linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,0));
+z-index:-1;
+}
+
+/* HERO */
+.hero{height:100vh;position:relative;overflow:hidden}
+.hero-bg{position:absolute;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;width:100%;height:100%;background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,0))}
+.hero-content{position:absolute;top:50%;transform:translateY(-50%);left:8%;z-index:2}
+.hero h1{font-family:"Bebas";font-size:120px;line-height:.9}
+.hero-sub{margin-top:20px;font-size:18px;opacity:.9}
+.hero-bottom-gradient{
+position:absolute;bottom:0;width:100%;height:220px;
+background:linear-gradient(to bottom,rgba(0,0,0,0),#000);
+}
+
+/* SOCIALS */
+.socials{margin-top:30px;display:flex;gap:14px}
+.section-socials{margin-top:40px}
+.small-socials{margin-top:15px}
+.socials a{
+width:40px;height:40px;background:#1a1a1a;border-radius:10px;
+display:flex;align-items:center;justify-content:center;
+transition:.3s;opacity:.8
+}
+.socials a:hover{opacity:1;transform:translateY(-3px)}
+.socials img{width:20px}
+
+/* SECTION */
+.studio{padding:100px 8%}
+.studio h2{font-family:"Bebas";font-size:72px;margin-bottom:10px}
+.studio-sub{margin-top:10px;font-size:18px;opacity:.7}
+
+/* SLIDER */
+.slider-wrapper{position:relative;margin-top:30px}
+.slider{
+display:flex;
+gap:24px;
+overflow-x:auto;
+scroll-behavior:smooth;
+-webkit-overflow-scrolling:touch;
+}
+.slider::-webkit-scrollbar{display:none}
+
+/* ЕДИНЫЙ РАЗМЕР КАРТОЧЕК */
+.card{
+flex:0 0 360px;
+width:360px;
+background:#111;
+border-radius:16px;
+padding:30px;
+border:1px solid rgba(255,255,255,.05);
+transition:.3s;
+display:flex;
+flex-direction:column;
+}
+.card:hover{transform:translateY(-8px)}
+.card h3{font-family:"Bebas";font-size:28px;margin-bottom:12px}
+.card p{font-size:15px;opacity:.7;line-height:1.5}
+
+/* MEDIA */
+.media{
+width:100%;
+aspect-ratio:3/4;
+background:#1a1a1a;
+border-radius:12px;
+margin-bottom:18px;
+overflow:hidden;
+}
+.media-slider{
+display:flex;
+gap:12px;
+overflow-x:auto;
+scroll-behavior:smooth;
+-webkit-overflow-scrolling:touch;
+}
+.media-slider::-webkit-scrollbar{display:none}
+.media-item{
+flex:0 0 100%;
+aspect-ratio:3/4;
+border-radius:12px;
+overflow:hidden;
+}
+.media-item img,
+.media-item video{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+/* ARROWS */
+.arrow{
+position:absolute;top:50%;
+transform:translateY(-50%);
+background:rgba(255,255,255,.1);
+border:none;color:#fff;font-size:28px;
+width:50px;height:50px;border-radius:50%;
+cursor:pointer;backdrop-filter:blur(6px);
+transition:.3s;z-index:5;
+}
+.arrow:hover{background:rgba(255,255,255,.25)}
+.arrow.left{left:-25px}
+.arrow.right{right:-25px}
+
+/* REVIEWS */
+.review-card{
+flex:0 0 360px;
+width:360px;
+}
+.review-desc{
+font-size:13px;
+opacity:.5;
+margin-bottom:14px;
+}
+.review-text{
+font-size:15px;
+line-height:1.6;
+opacity:.85;
+white-space:pre-line;
+}
+
+/* FOOTER */
+.footer{
+padding:80px 8%;
+font-size:14px;
+opacity:.6;
+line-height:1.8;
+}
+.footer p{margin-bottom:16px}
+
+/* COOKIE */
+.cookie{
+position:fixed;
+bottom:20px;
+left:50%;
+transform:translateX(-50%);
+background:#111;
+padding:20px 30px;
+border-radius:16px;
+display:flex;
+gap:20px;
+align-items:center;
+z-index:2000;
+}
+.cookie button{
+background:#ff7800;border:none;padding:10px 20px;
+border-radius:10px;cursor:pointer;color:#000;font-weight:600;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.card{flex:0 0 280px;width:280px;}
+.arrow{display:none}
+}
+
+/* ПК — убрать стрелки у ИИ-ПОДАРКИ */
+@media(min-width:901px){
+.gifts-slider-wrapper > .arrow{display:none}
+}
+
+/* ===== ОБЪЕДИНЁННЫЙ РАЗДЕЛ "ПРИМЕРЫ В ВИДЕО" ===== */
+.video-examples-section .card {
+  flex: 0 0 600px;
+  width: 600px;
+}
+.video-examples-section .media {
+  aspect-ratio: 16 / 9;
+}
+.video-examples-section .media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1200px) {
+  .video-examples-section .card {
+    flex: 0 0 480px;
+    width: 480px;
+  }
+}
+@media (max-width: 900px) {
+  .video-examples-section .card {
+    flex: 0 0 280px;
+    width: 280px;
+  }
+  .video-examples-section .media {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* подзаголовки разделов (чуть меньше основного шрифта) */
+.video-subheading {
+  font-family: "Bebas", sans-serif;
+  font-size: 36px;
+  margin: 40px 0 10px 0;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* ===== АУДИОПЛЕЕР ===== */
+.audio-player {
+  background: #111;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid rgba(255,255,255,.1);
+}
+.track {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #1a1a1a;
+  border-radius: 14px;
+  transition: .3s;
+}
+.track:hover { background: #222; }
+.track-title {
+  font-family: "Bebas", sans-serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.track-duration {
+  font-family: "TikTok", sans-serif;
+  font-size: 14px;
+  opacity: .6;
+}
+.custom-audio {
+  width: 100%;
+  height: 40px;
+  background: #2a2a2a;
+  border-radius: 40px;
+  overflow: hidden;
+}
+.custom-audio::-webkit-media-controls-panel {
+  background: #2a2a2a;
+}
+.custom-audio::-webkit-media-controls-current-time-display,
+.custom-audio::-webkit-media-controls-time-remaining-display {
+  color: #fff;
+}
+.track-description {
+  font-size: 15px;
+  opacity: .7;
+  line-height: 1.5;
+  margin-top: 12px;
+  font-family: "TikTok", sans-serif;
+}
+.price {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.1);
+  font-family: "Bebas", sans-serif;
+  font-size: 22px;
+  color: #ffa500;
+}
+/* ===== ПОРТФОЛИО: ДВЕ КОЛОНКИ ===== */
+.portfolio-grid {
+  display: flex;
+  gap: 5%;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+.audio-col {
+  flex: 0 0 40%;
+}
+.covers-col {
+  flex: 0 0 55%;
+}
+
+/* Слайдер обложек (квадратные, 1:1) */
+.covers-slider-wrapper {
+  position: relative;
+}
+.covers-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.covers-slider::-webkit-scrollbar {
+  display: none;
+}
+.cover-item {
+  flex: 0 0 auto;
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  background: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.cover-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Стрелки для слайдера обложек */
+.covers-slider-wrapper .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+}
+.covers-slider-wrapper .arrow.left {
+  left: -18px;
+}
+.covers-slider-wrapper .arrow.right {
+  right: -18px;
+}
+
+/* Адаптив: на мобильных колонки в столбик */
+@media (max-width: 900px) {
+  .portfolio-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .audio-col, .covers-col {
+    flex: 0 0 100%;
+  }
+  .covers-slider-wrapper .arrow {
+    display: flex; /* показываем стрелки на мобильных? можно оставить как есть */
+  }
+  .cover-item {
+    width: 160px;
+  }
+}
+/* ===== ПОРТФОЛИО: ДВЕ КОЛОНКИ ===== */
+.portfolio-grid {
+  display: flex;
+  gap: 5%;
+  align-items: stretch; /* чтобы колонки были одинаковой высоты */
+  margin-top: 30px;
+}
+.audio-col {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+}
+.tracks-list {
+  max-height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+/* красивая полоса прокрутки (опционально) */
+.tracks-list::-webkit-scrollbar {
+  width: 4px;
+}
+.tracks-list::-webkit-scrollbar-track {
+  background: #222;
+}
+.tracks-list::-webkit-scrollbar-thumb {
+  background: #ffa500;
+  border-radius: 4px;
+}
+
+.covers-col {
+  flex: 0 0 55%;
+}
+
+/* Слайдер обложек — одна обложка на экран */
+.covers-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+.covers-slider {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #1a1a1a;
+  border-radius: 24px;
+}
+.covers-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+.cover-item {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+}
+.cover-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Стрелки поверх картинки */
+.covers-slider-wrapper .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  z-index: 10;
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+}
+.covers-slider-wrapper .arrow.left {
+  left: 10px;
+}
+.covers-slider-wrapper .arrow.right {
+  right: 10px;
+}
+.covers-slider-wrapper .arrow:hover {
+  background: rgba(0,0,0,0.9);
+}
+
+/* Адаптив: на мобильных колонки в столбик */
+@media (max-width: 900px) {
+  .portfolio-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .audio-col, .covers-col {
+    flex: 0 0 100%;
+  }
+  .tracks-list {
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+/* Дополнительное описание в HERO */
+.hero-description {
+  margin-top: 30px;
+  max-width: 500px;
+}
+.hero-description p {
+  font-size: 15px;
+  line-height: 1.5;
+  opacity: 0.75;
+  margin-bottom: 12px;
+  font-family: "TikTok", sans-serif;
+}
+@media (max-width: 900px) {
+  .hero-description {
+    max-width: 90%;
+  }
+  .hero-description p {
+    font-size: 14px;
+  }
+}
+/* Кнопка ЗАКАЗАТЬ — широкая, но в строке с иконками */
+.order-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;               /* такая же высота, как у иконок */
+  padding: 0 50px;            /* делаем шире за счёт горизонтальных отступов */
+  background: #1a1a1a;        /* фон как у иконок */
+  color: #ffa500;             /* оранжевый текст */
+  font-family: "Bebas", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;        /* скругление как у иконок */
+  transition: 0.3s;
+  letter-spacing: 1px;
+}
+.order-btn:hover {
+  background: #2a2a2a;        /* светлее при наведении, как у иконок */
+  transform: translateY(-3px); /* тот же эффект подъёма */
+}
+/* Уменьшаем отступы между разделами */
+.studio {
+  padding: 70px 8%;
+}
+
+/* Анимация появления */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+.fade-up.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
