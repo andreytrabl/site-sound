@@ -518,3 +518,143 @@ border-radius:10px;cursor:pointer;color:#000;font-weight:600;
   opacity: 1;
   transform: translateY(0);
 }
+/* ===== МОБИЛЬНАЯ АДАПТАЦИЯ (до 768px) ===== */
+@media (max-width: 768px) {
+  /* Header — меню вертикально или прокрутка */
+  .header {
+    padding: 15px 5%;
+  }
+  .header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .header a {
+    font-size: 16px;
+  }
+
+  /* Hero — текст и отступы */
+  .hero-content {
+    left: 5%;
+    top: 55%;
+    width: 90%;
+  }
+  .hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+  .hero-sub {
+    font-size: 14px;
+  }
+  .hero-description p {
+    font-size: 12px;
+  }
+  .hero-description {
+    max-width: 100%;
+  }
+  .hero-buttons {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .order-btn {
+    padding: 0 20px;
+    font-size: 16px;
+    height: 36px;
+  }
+  .socials a {
+    width: 36px;
+    height: 36px;
+  }
+  .socials img {
+    width: 18px;
+  }
+
+  /* Все секции */
+  .studio {
+    padding: 50px 5%;
+  }
+  .studio h2 {
+    font-size: 36px;
+  }
+  .studio-sub {
+    font-size: 14px;
+  }
+
+  /* Карточки — на всю ширину */
+  .cards.slider {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 20px;
+  }
+  .video-examples-section .card {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  .video-examples-section .media {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Слайдеры — отключаем горизонтальный скролл, делаем вертикальный список */
+  .slider-wrapper {
+    overflow-x: visible;
+  }
+  .slider {
+    overflow-x: visible;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .arrow {
+    display: none;
+  }
+
+  /* Портфолио: колонки в столбик */
+  .portfolio-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .audio-col, .covers-col {
+    flex: 0 0 100%;
+  }
+  .tracks-list {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  /* Слайдер обложек (квадратный) */
+  .covers-slider-wrapper .arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+  .covers-slider-wrapper .arrow.left {
+    left: 5px;
+  }
+  .covers-slider-wrapper .arrow.right {
+    right: 5px;
+  }
+
+  /* Отзывы — карточки на всю ширину */
+  .reviews-slider {
+    flex-direction: column;
+  }
+  .review-card {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  /* Видео в карточках */
+  .media video {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Футер */
+  .footer {
+    padding: 40px 5%;
+    font-size: 12px;
+  }
+}
